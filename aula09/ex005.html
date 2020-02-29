@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: rgb(95, 95, 199);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>TESTE</h1>
+    <div>
+        <p>isso é uma aula de JS</p>
+        <p>testando o <strong>DOM</strong></p>
+    </div>
+    <script>
+        var p1 = document.getElementsByTagName('p')[1]
+        document.write(p1.innerText+"<br>")// pega somente o texto sem as TAGS filhas
+        document.write(p1.innerHTML)// pega o texto com as tags filha
+        
+    </script>
+</body>
+</html>

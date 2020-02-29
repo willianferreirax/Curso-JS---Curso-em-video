@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula002 - Curso JS</title>
+
+    <style>
+        body{
+            background-color : yellow;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <!--comentario em HTML -->
+    <script>
+        var n1 = Number(prompt('digito primeiro numero'))
+        var n2 = Number(prompt('digite o segundo numero'))
+        var n3 = n1+n2
+        /* 
+        isso seria concatenado se não fosse convertido
+        pois, 
+        'quando o JS encontra string+string ele concatena
+
+        quando encontra number+number ele soma'
+
+        o comando prompt retorna sempre uma string
+
+        */
+        alert(`${n3} os números foram somados`)
+    </script>
+</body>
+</html>

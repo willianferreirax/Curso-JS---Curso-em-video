@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula de condições</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <div>
+        Velocidade:<input type="number" name="velocidade" id="vel">
+        <button onclick='calcular()'>Fui multado?</button>
+
+        <div id="result"></div>
+    </div>
+
+    <h2>Saiba se é brasileiro</h2>
+    <div>
+        Nome do seu país :<input type="text" name="pais" id="pais">
+        <button onclick="brasileiro()">Qual minha nacionalidade?</button>
+
+        <div id="result2"></div>
+    </div>
+
+    <script>
+        function calcular(){
+
+            var velocidadeTXT = document.getElementById('vel')
+            var velocidadeVAL = Number(velocidadeTXT.value)
+            var result = document.getElementById('result')
+            result.innerHTML ='';
+
+            if(velocidadeVAL > 60){
+                result.innerHTML += '<p>Você foi <strong>multado</strong> por exesso de velocidade</p>'
+            }
+
+            result.innerHTML += `<p>Sua velocidade foi ${velocidadeVAL} km/h</p>`
+            result.innerHTML += 'Dirija sempre com cuidado'
+
+        }
+
+        function brasileiro (){
+            var result = document.getElementById('result2')
+            result.innerHTML = ''
+
+            var pais = document.getElementById('pais').value
+
+            if(pais == 'brasil'){
+                result.innerHTML = '<p>Você é brasileiro</p>'
+            }
+            else{
+                result.innerHTML = '<p>Você não é brasileiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
